@@ -1,0 +1,23 @@
+* {
+	margin:0px;
+}
+
+body {
+	background-image: url("../img/fondo7.jpg");
+	background-position: top;
+	font-family: helvetica;
+	font-size: 25px;
+	color:black;
+}
+
+.barranavegacion :hover {
+	background:rgba(52, 73, 94,0.3);
+}
+.barranavegacion {
+	background:rgba(52, 73, 94,0.5);
+	margin-bottom: 1px;
+	color:white;
+}
+.formulario {
+	margin-top: 50px;
+}
