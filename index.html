@@ -8,24 +8,6 @@
 </head>
 <!-- Con ng-controller lo que hago es crear el controlador para toda la pagina por eso esta en el body -->
 <body ng-controller="ExpensesViewController">
-	{{name}} <!-- aqui se llama la variable name  que se definio en el archivo app.js-->
-	<h1>{{phrase}}</h1>
-	{{expense.description}}.{{expense.amount}}
-	<button ng-click="increaseAmount()">Incrementar si señores</button>
-	<div style="margin-top:50px;">
-		<input type="text" ng-model="expense.description">	
-		<input type="number" ng-model="expense.amount">
-		<textarea ng-model="phrase"></textarea>
-	</div>
-	<!-- Aqui abajo se crea una lista de usuarios que se va auto-actualizar -->
-	<div>
-		<ul>
-			<!-- abajo se estan trayendo campos 1 por 1 de el array items creado en app.js para ponerlos en item y luego usarlos 1 por 1 -->
-			<li ng-repeat="item in items">
-				{{item.name}} - ingredientes <span style="color:blue;" ng-repeat="ingredient in item.ingredients">
-				{{ingredient}}</span>
-			</li>
-		</ul>
-	</div>
+
 </body>
 </html>
