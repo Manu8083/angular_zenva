@@ -1,4 +1,4 @@
-<html>
+<html ng-app="expensesApp">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">    
@@ -6,22 +6,22 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body ng-controller="HomeViewController">
     <nav class="barranavegacion" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <span><img src="img/logo.png"class="brand" /> ManuTromero</span>
+          <span><img src="img/logo.png"class="brand"/>{{apptitle}}</span>
         </div>
       </div>
     </nav>
-    <div class="container formulario">
+    <div class="container formulario" ng-controller="ExpensesViewController">
       <div class="row">
         <div class="col-xs-12">
 
           <ul class="list-group">
-            <li class="list-group-item text-center">
-              <span class="pull-left">$10</span>food
-        
+            <li class="list-group-item text-center" ng-repeat="expense in expenses" class="list-group-item text= center">
+              <span class="pull-left">${{expense.amount}}</span>{{expense.description}}
+      
               <button type="button" class="btn btn-danger btn-s pull-right btn-separation-left"><span class="glyphicon glyphicon-trash"> </span></button>        
               <a href="" class="btn btn-primary btn-s pull-right"><span class="glyphicon glyphicon-pencil"></span></a>
             </li>
@@ -55,15 +55,13 @@
               <button type="button" class="btn btn-danger btn-s pull-right btn-separation-left"><span class="glyphicon glyphicon-trash"> </span></button>        
               <a href="" class="btn btn-primary btn-s pull-right"><span class="glyphicon glyphicon-pencil"></span></a>
             </li>
-
           </ul>   
         </div>
       </div>
     </div>
-    <script src="js/underscore-min.js"></script>
-    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/angular.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
