@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ens" ng-app="expensesApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Mi App</title>
+	<script src="lib/angular.min.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body ng-controller="ExpensesViewController">
+	{{name}}
+	<h1>{{phrase}}</h1>
+	{{expense.description}}.{{expense.amount}}
+	<button ng-click="increaseAmount()">Incrementar si señores</button>
+</body>
+</html>
