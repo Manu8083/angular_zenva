@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">    
-    <title>ManuTromero</title>
+    <title>PRUEBA DE FORK</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -20,7 +20,7 @@
 
           <ul class="list-group">
             <li class="list-group-item text-center" ng-repeat="expense in expenses" class="list-group-item text= center">
-              <span class="pull-left">${{expense.amount}}</span>{{expense.description}}
+              <span class="pull-left">${{expense.amount}}</span>{{expense.description | uppercase}}
       
               <button type="button" class="btn btn-danger btn-s pull-right btn-separation-left"><span class="glyphicon glyphicon-trash"> </span></button>        
               <a href="" class="btn btn-primary btn-s pull-right"><span class="glyphicon glyphicon-pencil"></span></a>
@@ -60,6 +60,7 @@
       </div>
     </div>
     <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
     <script src="lib/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
